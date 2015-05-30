@@ -9,8 +9,8 @@
 ## Functionality
 
 ## Files
- * bin/check-supervisor
- * bin/check-supervisor-socket
+ * bin/check-supervisor.rb
+ * bin/check-supervisor-socket.rb
 
 ## Usage
 
