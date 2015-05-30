@@ -1,7 +1,14 @@
+
+require 'sensu-plugins-supervisor/version'
+
+# Load the defaults
+
 #
-# Set gem version
+# Default class
 #
 module SensuPluginsSupervisor
-  # Gem version
-  VERSION = '0.0.1.alpha.1'
+  end
+
+  class << self
+  end
 end
