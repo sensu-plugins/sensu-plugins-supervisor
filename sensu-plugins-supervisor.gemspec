@@ -21,7 +21,7 @@ Gem::Specification.new do |s|
   s.files                  = Dir.glob('{bin,lib}/**/*') + %w(LICENSE README.md CHANGELOG.md)
   s.homepage               = 'https://github.com/sensu-plugins/sensu-plugins-supervisor'
   s.license                = 'MIT'
-  s.metadata               = { 'maintainer'         => '',
+  s.metadata               = { 'maintainer'         => 'sensu-plugin',
                                'production_status'  => 'unstable - testing recommended',
                                'release_draft'      => 'false',
                                'release_prerelease' => 'false'
