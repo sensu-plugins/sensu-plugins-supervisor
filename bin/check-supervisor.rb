@@ -30,37 +30,37 @@ require 'ruby-supervisor'
 class CheckSupervisor < Sensu::Plugin::Check::CLI
   option :host,
          description: 'Hostname to check',
-         short: '-H HOST',
-         long: '--host HOST',
-         default: 'localhost'
+         short:       '-H HOST',
+         long:        '--host HOST',
+         default:     'localhost'
 
   option :port,
          description: 'Supervisor port',
-         short: '-p PORT',
-         long: '--port PORT',
-         default: 9001
+         short:       '-p PORT',
+         long:        '--port PORT',
+         default:     9001
 
   option :username,
-         description:   'Supervisor HTTP username',
-         short:         '-u USERNAME',
-         long:          '--username USERNAME'
+         description: 'Supervisor HTTP username',
+         short:       '-u USERNAME',
+         long:        '--username USERNAME'
 
   option :password,
-         description:   'Supervisor HTTP password',
-         short:         '-p PASSWORD',
-         long:          '--password PASSWORD'
+         description: 'Supervisor HTTP password',
+         short:       '-p PASSWORD',
+         long:        '--password PASSWORD'
 
   option :critical,
          description: 'Supervisor states to consider critical',
-         short: '-c STATE[,STATE...]',
-         long: '--critical STATE[,STATE...]',
-         proc: proc { |v| v.upcase.split(',') },
-         default: ['FATAL']
+         short:       '-c STATE[,STATE...]',
+         long:        '--critical STATE[,STATE...]',
+         proc:        proc { |v| v.upcase.split(',') },
+         default:     ['FATAL']
 
   option :help,
          description: 'Show this message',
-         short: '-h',
-         long: '--help'
+         short:       '-h',
+         long:        '--help'
 
   def run
     if config[:help]
