@@ -40,6 +40,16 @@ class CheckSupervisor < Sensu::Plugin::Check::CLI
          long: '--port PORT',
          default: 9001
 
+  option :username,
+         description:   'Supervisor HTTP username',
+         short:         '-u USERNAME',
+         long:          '--username USERNAME'
+
+  option :password,
+         description:   'Supervisor HTTP password',
+         short:         '-p PASSWORD',
+         long:          '--password PASSWORD'
+
   option :critical,
          description: 'Supervisor states to consider critical',
          short: '-c STATE[,STATE...]',
@@ -58,8 +68,18 @@ class CheckSupervisor < Sensu::Plugin::Check::CLI
       exit
     end
 
+    params = {}
+
+    if config[:username]
+      params[:username] = config[:username]
+    end
+
+    if config[:password]
+      params[:password] = config[:password]
+    end
+
     begin
-      @super = RubySupervisor::Client.new(config[:host], config[:port])
+      @super = RubySupervisor::Client.new(config[:host], config[:port], params)
     rescue
       critical "Tried to access #{config[:host]} but failed"
     end
