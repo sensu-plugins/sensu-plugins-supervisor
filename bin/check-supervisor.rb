@@ -70,7 +70,7 @@ class CheckSupervisor < Sensu::Plugin::Check::CLI
       failed_processes << "#{process['name']} not running: #{process['statename'].downcase}" if config[:critical].include?(process['statename'])
     end
 
-    critical "\n#{failed_processes.to_a.join("\n")}" if not failed_processes.empty?
+    critical "\n#{failed_processes.to_a.join("\n")}" unless failed_processes.empty?
 
     ok 'All processes running'
   end # def run
