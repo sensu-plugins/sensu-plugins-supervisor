@@ -18,7 +18,6 @@ This CHANGELOG follows the format listed at [Keep A Changelog](http://keepachang
 - removed cruft from /lib
 
 ## 0.0.1 - 2015-05-29
-
 ### Added
 - initial release
 
