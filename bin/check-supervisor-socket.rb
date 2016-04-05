@@ -68,8 +68,8 @@ class CheckSupervisorSocket < Sensu::Plugin::Check::CLI
 
     begin
       @super = Net::BufferedIO.new(UNIXSocket.new(config[:socket]))
-    rescue
-      critical "Tried to access UNIX domain socket #{config[:socket]} but failed"
+    rescue => e
+      critical "Tried to access UNIX domain socket #{config[:socket]} but failed: #{e}"
     end
 
     begin
