@@ -5,6 +5,7 @@ This CHANGELOG follows the format listed at [Keep A Changelog](http://keepachang
 
 ## [Unreleased]
 - connect to http with login and password
+- Show the list of all supervisor processes that failed 
 
 ## [0.0.3] - 2015-07-14
 ### Changed
