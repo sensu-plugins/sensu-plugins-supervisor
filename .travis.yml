@@ -24,7 +24,7 @@ deploy:
     secure: RCurZLaMj6zYEhyIxDHZlkcCO5n9tEOrkVDSaedBmqYD1UrPCGnV9SD2N39vR0cb195Vj85NzBKRlej4N9LBBinY+UiNSZhGOlZVF5lesTGGpr5C0fLcGe6hAejnGpnkzyzh8YBVfzRy7nerj6RrzlvvoZKU2bp80q0dg1I50I0=
   gem: sensu-plugins-supervisor
   on:
-    ags: true
+    tags: true
     all_branches: true
     rvm: 1.9.3
     rvm: 2.0
