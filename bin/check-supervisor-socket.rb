@@ -91,7 +91,7 @@ class CheckSupervisorSocket < Sensu::Plugin::Check::CLI
       @super.close
 
       success, result = XMLRPC::XMLParser::XMLStreamParser.new.parseMethodResponse(response.body)
-      fail unless success
+      raise unless success
     rescue => e
       critical "Tried requesting XMLRPC 'supervisor.getAllProcessInfo' from UNIX domain socket #{config[:socket]} but failed: #{e}"
     end
