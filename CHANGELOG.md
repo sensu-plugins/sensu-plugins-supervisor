@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 This CHANGELOG follows the format listed at [Keep A Changelog](http://keepachangelog.com/)
 
 ## [Unreleased]
+- use build-in xmlrpc parser
 - connect to http with login and password
 - Show the list of all supervisor processes that failed 
 

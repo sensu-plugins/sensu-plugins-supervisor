@@ -29,7 +29,8 @@ require 'sensu-plugin/check/cli'
 
 require 'net/http'
 require 'socket'
-require 'xml/libxml/xmlrpc'
+require 'xmlrpc/create'
+require 'xmlrpc/parser'
 
 class CheckSupervisorSocket < Sensu::Plugin::Check::CLI
   option :socket,
@@ -76,7 +77,7 @@ class CheckSupervisorSocket < Sensu::Plugin::Check::CLI
       request = Net::HTTP::Post.new('/RPC2')
       request.content_type = 'text/xml'
       request.basic_auth config[:username], config[:password] if config[:username]
-      request.body = XML::XMLRPC::Builder.call('supervisor.getAllProcessInfo')
+      request.body = XMLRPC::Create.new(XMLRPC::XMLWriter::Simple.new).methodCall('supervisor.getAllProcessInfo')
       request.exec(@super, '1.1', '/RPC2')
 
       # wait for and parse the http response
@@ -87,14 +88,16 @@ class CheckSupervisorSocket < Sensu::Plugin::Check::CLI
       end
 
       response.reading_body(@super, request.response_body_permitted?) {}
+      @super.close
+
+      success, result = XMLRPC::XMLParser::XMLStreamParser.new.parseMethodResponse(response.body)
+      raise unless success
     rescue => e
       critical "Tried requesting XMLRPC 'supervisor.getAllProcessInfo' from UNIX domain socket #{config[:socket]} but failed: #{e}"
     end
 
-    XML::XMLRPC::Parser.new(response.body).params.each do |param|
-      param.each do |process|
-        critical "#{process[:name]} not running: #{process[:statename].upcase}" if config[:critical].include?(process[:statename])
-      end
+    result.each do |process|
+      critical "#{process['name']} not running: #{process['statename'].upcase}" if config[:critical].include?(process['statename'])
     end
 
     ok 'All processes running'
