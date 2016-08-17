@@ -4,9 +4,16 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 This CHANGELOG follows the format listed at [Keep A Changelog](http://keepachangelog.com/)
 
 ## [Unreleased]
-- use build-in xmlrpc parser
-- connect to http with login and password
-- Show the list of all supervisor processes that failed 
+
+## [0.0.4] - 2016-08-17
+### Changed
+- Updated sensu-plugin dependency from `= 1.2.0` to `~> 1.2.0`
+- Now using built-in xmlrpc parser, removes dependecy on libxml-xmlrpc
+- Failure connecting to supervisor now provides additional exception context
+
+### Added
+- check-supervisor.rb: added support for username and password via http
+- check-supervisor.rb: added support for reporting multiple failed services per run
 
 ## [0.0.3] - 2015-07-14
 ### Changed
@@ -23,6 +30,7 @@ This CHANGELOG follows the format listed at [Keep A Changelog](http://keepachang
 ### Added
 - initial release
 
-[Unreleased]: https://github.com/sensu-plugins/sensu-plugins-supervisor/compare/0.0.3...HEAD
+[Unreleased]: https://github.com/sensu-plugins/sensu-plugins-supervisor/compare/0.0.4...HEAD
+[0.0.4]: https://github.com/sensu-plugins/sensu-plugins-supervisor/compare/0.0.3...0.0.4
 [0.0.3]: https://github.com/sensu-plugins/sensu-plugins-supervisor/compare/0.0.2...0.0.3
 [0.0.2]: https://github.com/sensu-plugins/sensu-plugins-supervisor/compare/0.0.1...0.0.2
