@@ -37,7 +37,7 @@ class CheckSupervisor < Sensu::Plugin::Check::CLI
 
   option :port,
          description: 'Supervisor port',
-         short:       '-p PORT',
+         short:       '-P PORT',
          long:        '--port PORT',
          default:     9001
 
@@ -72,7 +72,7 @@ class CheckSupervisor < Sensu::Plugin::Check::CLI
     params = {}
 
     if config[:username]
-      params[:username] = config[:username]
+      params[:user] = config[:username]
     end
 
     if config[:password]
