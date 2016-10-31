@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 This CHANGELOG follows the format listed at [Keep A Changelog](http://keepachangelog.com/)
 
 ## [Unreleased]
+- bumped ruby version to 2.1
 - check-supervisor.rb: Fixed wrong variable assignment, this fixes authentication failures when running check.
 - check-supervisor.rb: Updated port short variable name to avoid collision with password variable (-p -> -P).
 
