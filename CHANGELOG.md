@@ -4,7 +4,16 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 This CHANGELOG follows the format listed at [Keep A Changelog](http://keepachangelog.com/)
 
 ## [Unreleased]
-- bumped ruby version to 2.1
+### Added
+- Support for Ruby 2.3.0
+
+### Removed
+- Support for Ruby 1.9.3
+
+### Changed
+- Bump mininum ruby version to 2.1
+
+### Fixed
 - check-supervisor.rb: Fixed wrong variable assignment, this fixes authentication failures when running check.
 - check-supervisor.rb: Updated port short variable name to avoid collision with password variable (-p -> -P).
 
