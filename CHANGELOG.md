@@ -8,7 +8,7 @@ This CHANGELOG follows the format listed at [Keep A Changelog](http://keepachang
 - Support for Ruby 2.3.0
 
 ### Removed
-- Support for Ruby 1.9.3
+- Support for Ruby 1.9.3 & Ruby 2.0.0
 
 ### Changed
 - Bump mininum ruby version to 2.1
