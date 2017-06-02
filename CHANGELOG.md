@@ -7,6 +7,7 @@ This CHANGELOG follows the format listed at [Keep A Changelog](http://keepachang
 ## [1.0.1] 2017-06-01
 ### Fixed
 - check-supervisor-socket.rb: update XMLRPC::XMLParser::XMLStreamParser to XMLRPC::XMLParser::LibXMLStreamParser as per issue https://github.com/sensu-plugins/sensu-plugins-supervisor/issues/16
+- sensu-plugins-supervisor.gemspec: update Gemspec and README as per issue https://github.com/sensu-plugins/sensu-plugins-supervisor/issues/15
 
 ## [1.0.0] - 2016-11-07
 ### Added
