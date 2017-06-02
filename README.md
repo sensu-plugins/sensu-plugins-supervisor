@@ -16,6 +16,18 @@
 
 ## Installation
 
+You will need the `expat` development library installed prior to installing this plugin. For CentOS/RHEL systems:
+
+```
+yum install expat-devel
+```
+
+Ubuntu systems:
+
+```
+apt-get install libexpat1-dev
+```
+
 [Installation and Setup](http://sensu-plugins.io/docs/installation_instructions.html)
 
 ## Notes
