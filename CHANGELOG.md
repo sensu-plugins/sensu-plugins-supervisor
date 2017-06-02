@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 This CHANGELOG follows the format listed at [Keep A Changelog](http://keepachangelog.com/)
 
 ## [Unreleased]
+## [1.0.1] 2017-06-01
 ### Fixed
 - check-supervisor-socket.rb: update XMLRPC::XMLParser::XMLStreamParser to XMLRPC::XMLParser::LibXMLStreamParser as per issue https://github.com/sensu-plugins/sensu-plugins-supervisor/issues/16
 
@@ -46,7 +47,8 @@ This CHANGELOG follows the format listed at [Keep A Changelog](http://keepachang
 ### Added
 - initial release
 
-[Unreleased]: https://github.com/sensu-plugins/sensu-plugins-supervisor/compare/1.0.0...HEAD
+[Unreleased]: https://github.com/sensu-plugins/sensu-plugins-supervisor/compare/1.0.1...HEAD
+[1.0.1]: https://github.com/sensu-plugins/sensu-plugins-supervisor/compare/1.0.1...1.0.0
 [1.0.0]: https://github.com/sensu-plugins/sensu-plugins-supervisor/compare/0.0.4...1.0.0
 [0.0.4]: https://github.com/sensu-plugins/sensu-plugins-supervisor/compare/0.0.3...0.0.4
 [0.0.3]: https://github.com/sensu-plugins/sensu-plugins-supervisor/compare/0.0.2...0.0.3
