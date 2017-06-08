@@ -15,7 +15,7 @@
 #
 # DEPENDENCIES:
 #   gem: sensu-plugin
-#   gem: libxml-xmlrpc
+#   gem: ox
 #
 # USAGE:
 #   check-supervisor-socket.rb
@@ -31,6 +31,7 @@ require 'net/http'
 require 'socket'
 require 'xmlrpc/create'
 require 'xmlrpc/parser'
+require 'ox/xmlrpc_adapter'
 
 class CheckSupervisorSocket < Sensu::Plugin::Check::CLI
   option :socket,
@@ -90,7 +91,7 @@ class CheckSupervisorSocket < Sensu::Plugin::Check::CLI
       response.reading_body(@super, request.response_body_permitted?) {}
       @super.close
 
-      success, result = XMLRPC::XMLParser::LibXMLStreamParser.new.parseMethodResponse(response.body)
+      success, result = Ox::StreamParser.new.parseMethodResponse(response.body)
       raise unless success
     rescue => e
       critical "Tried requesting XMLRPC 'supervisor.getAllProcessInfo' from UNIX domain socket #{config[:socket]} but failed: #{e}"

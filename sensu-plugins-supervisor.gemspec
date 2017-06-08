@@ -30,9 +30,9 @@ Gem::Specification.new do |s|
   s.test_files             = s.files.grep(%r{^(test|spec|features)/})
   s.version                = SensuPluginsSupervisor::Version::VER_STRING
 
+  s.add_runtime_dependency 'ox', '~> 2.5.0'
   s.add_runtime_dependency 'ruby-supervisor', '0.0.2'
   s.add_runtime_dependency 'sensu-plugin', '~> 1.2'
-  s.add_runtime_dependency 'xmlparser', '~> 0.7.2'
 
   s.add_development_dependency 'bundler',                   '~> 1.7'
   s.add_development_dependency 'codeclimate-test-reporter', '~> 0.4'

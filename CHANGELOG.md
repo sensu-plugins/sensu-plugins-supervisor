@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 This CHANGELOG follows the format listed at [Keep A Changelog](http://keepachangelog.com/)
 
 ## [Unreleased]
+### Changed
+- check-supervisor-socket.rb: Switched to ox for xmlrpc parser, fixes #19.
 
 ## [1.0.2] 2017-06-01
 - sensu-plugins-supervisor.gemspec: update Gemspec and README as per issue https://github.com/sensu-plugins/sensu-plugins-supervisor/issues/15
