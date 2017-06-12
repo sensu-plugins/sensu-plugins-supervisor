@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 This CHANGELOG follows the format listed at [Keep A Changelog](http://keepachangelog.com/)
 
 ## [Unreleased]
+## [1.1.0] 2017-06-12
 ### Added
 - support for ruby 2.4: issues caused by `libxmlrpc` being removed from ruby 2.4. Basically we need to solve this by checking the version of ruby at **install time** where dependencies in `.gemspec` are specified at **build time**. This requires using a ruby extension. I included comments in several places to make this more obvious to users that might be confused by this behavior. I also included some Dockerfiles for ruby 2.2-2.4 so that we can test this out better.
 
@@ -57,7 +58,8 @@ This CHANGELOG follows the format listed at [Keep A Changelog](http://keepachang
 ### Added
 - initial release
 
-[Unreleased]: https://github.com/sensu-plugins/sensu-plugins-supervisor/compare/1.0.3...HEAD
+[Unreleased]: https://github.com/sensu-plugins/sensu-plugins-supervisor/compare/1.1.0...HEAD
+[1.1.0]: https://github.com/sensu-plugins/sensu-plugins-supervisor/compare/1.0.3...1.1.0
 [1.0.3]: https://github.com/sensu-plugins/sensu-plugins-supervisor/compare/1.0.2...1.0.3
 [1.0.2]: https://github.com/sensu-plugins/sensu-plugins-supervisor/compare/1.0.1...1.0.2
 [1.0.1]: https://github.com/sensu-plugins/sensu-plugins-supervisor/compare/1.0.0...1.0.1
