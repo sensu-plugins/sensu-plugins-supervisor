@@ -1,0 +1,12 @@
+FROM ruby:2.3-slim
+
+# some basic stuff
+RUN mkdir /usr/src/app
+ADD . /usr/src/app
+WORKDIR /usr/src/app
+
+# install required packages
+RUN apt-get update \
+  && apt-get install -y build-essential
+
+CMD ["./docker-test"]
