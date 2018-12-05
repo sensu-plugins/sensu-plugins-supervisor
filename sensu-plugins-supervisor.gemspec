@@ -36,7 +36,7 @@ Gem::Specification.new do |s|
 
   s.add_runtime_dependency 'ox', '~> 2.5.0'
   s.add_runtime_dependency 'ruby-supervisor', '0.0.2'
-  s.add_runtime_dependency 'sensu-plugin', '~> 1.2'
+  s.add_runtime_dependency 'sensu-plugin', '>= 1.2', '< 4.0'
   # when we drop ruby < 2.4 support we can add this and remove
   # the extension to conditionally deal with breaking changes
   # across ruby versions and uncomment the following:
