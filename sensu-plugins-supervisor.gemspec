@@ -42,7 +42,7 @@ Gem::Specification.new do |s|
   # across ruby versions and uncomment the following:
   # s.add_runtime_dependency 'xmlrpc', '~> 0.3'
 
-  s.add_development_dependency 'bundler',                   '~> 1.7'
+  s.add_development_dependency 'bundler',                   '~> 2.0'
   s.add_development_dependency 'codeclimate-test-reporter', '~> 0.4'
   s.add_development_dependency 'github-markup',             '~> 3.0'
   s.add_development_dependency 'pry',                       '~> 0.10'
