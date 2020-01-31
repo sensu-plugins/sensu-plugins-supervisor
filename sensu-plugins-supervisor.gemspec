@@ -34,7 +34,7 @@ Gem::Specification.new do |s|
   s.test_files             = s.files.grep(%r{^(test|spec|features)/})
   s.version                = SensuPluginsSupervisor::Version::VER_STRING
 
-  s.add_runtime_dependency 'ox', '~> 2.5.0'
+  s.add_runtime_dependency 'ox', '>= 2.5', '< 2.14'
   s.add_runtime_dependency 'ruby-supervisor', '0.0.2'
   s.add_runtime_dependency 'sensu-plugin', '~> 1.2'
   # when we drop ruby < 2.4 support we can add this and remove
